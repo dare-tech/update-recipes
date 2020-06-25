@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.jss-upload.Cyberduck</string>
+	<key>Input</key>
+	<dict>
+		<key>CATEGORY</key>
+		<string>Patch Management</string>
+		<key>NAME</key>
+		<string>Cyberduck</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://version.cyberduck.io/changelog.rss</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.rtrouton.jss-upload.Cyberduck</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.Cyberduck</key>
+			<dict>
+				<key>git_hash</key>
+				<string>c9fac2f0894ecab4a60b544bd9fd204fa0a561fe</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Cyberduck/Cyberduck.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>54a1740bef5711a9cda12c2acad8e103bacd4528411ad4e98ac908c308279149</string>
+			</dict>
+			<key>com.github.rtrouton.jss-upload.Cyberduck</key>
+			<dict>
+				<key>path</key>
+				<string>~/Library/AutoPkg/Recipes/Cyberduck.jss-upload.recipe</string>
+				<key>sha256_hash</key>
+				<string>0be2ea28749d170be65cbc5e113260129c371de3efa226d2c0df5163f7b67c02</string>
+			</dict>
+			<key>com.github.rtrouton.pkg.Cyberduck</key>
+			<dict>
+				<key>git_hash</key>
+				<string>3a3564e58053ad161b7c0d4bc823c7d3fc860e94</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/Cyberduck/Cyberduck.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>3ff732644b07f17358b251c8f5431ef89395ef589f5b6ccf41b2e2c1f93b9610</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
