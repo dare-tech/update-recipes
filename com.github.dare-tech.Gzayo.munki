@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of Gyazo and Gyazo GIF and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.dare-tech.Gzayo.munki</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Gyazo</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>Applications</string>
+			<key>developer</key>
+			<string>Nota Inc.</string>
+			<key>description</key>
+			<string>Take ready-to-share screenshots, GIFs, and replay videos for free. Now in HD.</string>
+			<key>display_name</key>
+			<string>Gyazo and Gyazo GIF</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>blocking_applications</key>
+			<array>
+				<string>Gyazo.app</string>
+				<string>Gyazo GIF.app</string>
+			</array>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.dare-tech.Gzayo.download</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiInstallsItemsCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>faux_root</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+				<key>version_comparison_key</key>
+				<string>CFBundleVersion</string>
+				<key>installs_item_paths</key>
+				<array>
+					<string>/Applications/Gyazo.app</string>
+					<string>/Applications/Gyazo GIF.app</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
