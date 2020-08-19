@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Gyazo and Gyazo GIF and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.Gzayo.munki</string>
+	<string>com.github.dare-tech.gzayo.munki</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -40,7 +40,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.Gzayo.download</string>
+	<string>com.github.dare-tech.gzayo.download</string>
 	<key>Process</key>
 	<array>
 		<dict>
