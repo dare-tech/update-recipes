@@ -5,7 +5,7 @@
   <key>Description</key>
   <string>Downloads the .dmg file containing Gyazo and Gyazo GIF.</string>
   <key>Identifier</key>
-  <string>com.github.dare-tech.gzayo.download</string>
+  <string>com.github.dare-tech.gyazo.download</string>
   <key>Input</key>
   <dict>
     <key>NAME</key>
