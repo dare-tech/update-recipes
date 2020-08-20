@@ -5,7 +5,7 @@
   <key>Description</key>
   <string>Downloads the .zip file containing Nucleo.app.</string>
   <key>Identifier</key>
-  <string>com.github.opalred.download.Nucleo</string>
+  <string>com.github.dare-tech.nucleo.download</string>
   <key>Input</key>
   <dict>
     <key>NAME</key>
