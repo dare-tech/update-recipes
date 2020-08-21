@@ -5,7 +5,7 @@
   <key>Description</key>
   <string>Downloads the .zip file containing Tweeten.app.</string>
   <key>Identifier</key>
-  <string>com.github.opalred.download.Tweeten</string>
+  <string>com.github.dare-tech.tweeten.download</string>
   <key>Input</key>
   <dict>
     <key>NAME</key>
