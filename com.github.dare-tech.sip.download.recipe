@@ -5,7 +5,7 @@
   <key>Description</key>
   <string>Downloads the .dmg file containing Sip.</string>
   <key>Identifier</key>
-  <string>com.github.opalred.download.Sip</string>
+  <string>com.github.dare-tech.sip.download</string>
   <key>Input</key>
   <dict>
     <key>NAME</key>
