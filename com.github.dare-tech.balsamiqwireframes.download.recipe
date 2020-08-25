@@ -41,26 +41,17 @@
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
+			<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
 				<string>%pathname%/Balsamiq Wireframes.app</string>
 				<key>requirement</key>
 				<string>anchor apple generic and identifier "com.balsamiq.wireframes" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "3DPKD72KQ7")</string>
+			</dict>	
 			</dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%pathname%/Balsamiq Wireframes.app/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleShortVersionString</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-		</dict>
-	</array>
+			</array>
 </dict>
 </plist>
