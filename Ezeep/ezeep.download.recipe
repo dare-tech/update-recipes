@@ -5,7 +5,7 @@
   <key>Description</key>
   <string>Downloads the .dmg file containing ezeep.</string>
   <key>Identifier</key>
-  <string>com.github.dare-tech.ezeep.download</string>
+  <string>com.github.dare-tech.download.ezeep</string>
   <key>Input</key>
   <dict>
     <key>NAME</key>
