@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Lingo.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.lingo.download</string>
+	<string>com.github.dare-tech.download.lingo</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
