@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Balsamiq Wireframes.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.balsamiqwireframes.download</string>
+	<string>com.github.dare-tech.download.balsamiqwireframes</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
