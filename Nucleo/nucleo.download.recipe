@@ -10,8 +10,6 @@
   <dict>
     <key>NAME</key>
     <string>Nucleo</string>
-    <key>DOWNLOAD_URL</key>
-    <string>https://nucleoapp.com/download/mac/latest</string>
   </dict>
   <key>MinimumVersion</key>
   <string>0.8.0</string>
