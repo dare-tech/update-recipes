@@ -5,7 +5,7 @@
   <key>Description</key>
   <string>Downloads the latest version of ZAP.</string>
   <key>Identifier</key>
-  <string>com.github.dare-tech.zap.download</string>
+  <string>com.github.dare-tech.download.zap</string>
   <key>Input</key>
   <dict>
     <key>NAME</key>
