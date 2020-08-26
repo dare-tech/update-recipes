@@ -39,7 +39,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.munki.nucleo</string>
+	<string>com.github.dare-tech.download.nucleo</string>
 	<key>Process</key>
 	<array>
 		<dict>
