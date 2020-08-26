@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of ZAP.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.munki</string>
+	<string>com.github.dare-tech.munki.zap</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.zap.download</string>
+	<string>com.github.dare-tech.download.zap</string>
 	<key>Process</key>
 	<array>
 		<dict>
