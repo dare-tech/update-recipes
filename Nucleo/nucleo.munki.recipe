@@ -60,6 +60,7 @@
 				<string>%dmg_path%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
 	</array>
 </dict>
 </plist>
