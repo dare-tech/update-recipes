@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of RingCentral Phone.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.download.RingCentralPhone</string>
+    <string>com.github.dare-tech.download.RingCentralPhone</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
