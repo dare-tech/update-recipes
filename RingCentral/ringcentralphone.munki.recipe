@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of RingCentral Phone and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.munki.RingCentralPhone</string>
+	<string>com.github.dare-tech.munki.ringcentralphone</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
