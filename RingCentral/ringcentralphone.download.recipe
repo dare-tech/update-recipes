@@ -45,10 +45,6 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>purge_destination</key>
 				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
