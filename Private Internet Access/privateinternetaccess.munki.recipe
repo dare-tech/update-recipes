@@ -44,13 +44,17 @@
 	<array>
 		<dict>
 			<key>Arguments</key>
-			<string></string>
+			<dict>
+				<key>installs</key>
+				<array>
+					<dict>
+						<key>path</key>
+						<string>/Applications/PrivateInternetAccess.app</string>
+					</dict>
+				</array>
+			</dict>
 			<key>Processor</key>
 			<string>MunkiPkginfoMerger</string>
-			<key>installs</key>
-			<array/>
-			<key>path</key>
-			<string>/Applications/PrivateInternetAccess.app</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
