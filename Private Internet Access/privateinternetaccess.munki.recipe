@@ -45,20 +45,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>additional_pkginfo</key>
-				<dict>
-					<key>installs</key>
-						<array>
-						<key>path</key>
-						<string>/Applications/Private Internet Access.app</string>
-						</array>
-			</dict>
-			<key>Processor</key>
-			<string>MunkiPkginfoMerger</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>dmg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
 				<key>dmg_root</key>
