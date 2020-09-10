@@ -52,14 +52,8 @@
          <key>installs</key>
          <array>
            <dict>
-             <key>CFBundleVersion</key>
-             <string>%version%</string>
              <key>path</key>
              <string>/Applications/Private Internet Access.app</string>
-             <key>type</key>
-             <string>application</string>
-             <key>version_comparison_key</key>
-             <string>CFBundleVersion</string>
            </dict>
          </array>
        </dict>
