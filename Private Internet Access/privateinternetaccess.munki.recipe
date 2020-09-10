@@ -50,6 +50,7 @@
 					<string>/Applications/PrivateInternetAccess.app</string>
 				</array>
 			</dict>
+		<dict>
 			<key>Processor</key>
 			<string>MunkiInstallsItemsCreator</string>
 		</dict>
