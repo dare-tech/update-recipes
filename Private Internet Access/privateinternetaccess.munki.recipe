@@ -51,8 +51,7 @@
 						<array>
 						<key>path</key>
 						<string>/Applications/Private Internet Access.app</string>
-					</dict>
-				</array>
+						</array>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiPkginfoMerger</string>
