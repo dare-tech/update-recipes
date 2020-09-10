@@ -41,8 +41,7 @@
 	<key>ParentRecipe</key>
 	<string>com.github.dare-tech.download.privateinternetaccess</string>
 	<key>Process</key>
-	<dict>
-		<key>0</key>
+	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -65,7 +64,6 @@
 			<key>Processor</key>
 			<string>MunkiImporter</string>
 		</dict>
-		<key>1</key>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -77,12 +75,10 @@
 			<key>Processor</key>
 			<string>DmgCreator</string>
 		</dict>
-		<key>2</key>
 		<dict>
 			<key>Processor</key>
 			<string>MunkiPkginfoMerger</string>
 		</dict>
-		<key>3</key>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -95,5 +91,6 @@
 			<string>MunkiImporter</string>
 		</dict>
 	</dict>
+	</array>
 </dict>
 </plist>
