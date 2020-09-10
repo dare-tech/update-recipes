@@ -42,6 +42,7 @@
 	<string>com.github.dare-tech.download.privateinternetaccess</string>
 	<key>Process</key>
 	<dict>
+		<key>0</key>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -64,6 +65,7 @@
 			<key>Processor</key>
 			<string>MunkiImporter</string>
 		</dict>
+		<key>1</key>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -80,6 +82,7 @@
 			<key>Processor</key>
 			<string>MunkiPkginfoMerger</string>
 		</dict>
+		<key>3</key>
 		<dict>
 			<key>Arguments</key>
 			<dict>
