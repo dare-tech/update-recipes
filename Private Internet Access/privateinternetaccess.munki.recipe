@@ -43,22 +43,6 @@
 	<key>Process</key>
 	<array>
 		<dict>
-		<key>faux_root</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>installs_item_paths</key>
-				<array>
-					<string>/Applications/PrivateInternetAccess.app</string>
-				</array>
-			</dict>
-		<dict>
-			<key>Processor</key>
-			<string>MunkiInstallsItemsCreator</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>MunkiPkginfoMerger</string>
-		</dict>
-		<dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
 			<key>Arguments</key>
