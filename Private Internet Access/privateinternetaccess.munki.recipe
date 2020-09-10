@@ -57,11 +57,11 @@
 		<key>type</key>
 		<string>application</string>		
 		<key>CFBundleVersion</key>
-		<string>version</string>
+		<string>%version%</string>
 		<key>CFBundleIdentifier</key>
 		<string>com.privateinternetaccess.vpn</string>
 		<key>CFBundleShortVersionString</key>
-		<string>CFBundleVersion</string>
+		<string>%version%</string>
 		<key>version_comparison_key</key>
 		<string>CFBundleVersion</string>
 	</dict>
