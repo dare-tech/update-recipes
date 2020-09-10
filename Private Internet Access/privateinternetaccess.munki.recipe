@@ -52,10 +52,12 @@
          <key>installs</key>
          <array>
            <dict>
-             <key>path</key>
-		   <string>/Applications/Private Internet Access.app</string>
-		   <key>type</key>
-		   <string>application</string>
+             	<key>path</key>
+		<string>/Applications/Private Internet Access.app</string>
+		<key>type</key>
+		<string>application</string>		
+		<key>CFBundleVersion</key>
+		<string>%version%</string>
 	</dict>
          </array>
        </dict>
