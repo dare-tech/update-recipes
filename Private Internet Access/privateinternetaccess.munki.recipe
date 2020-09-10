@@ -58,6 +58,10 @@
 		<string>application</string>		
 		<key>CFBundleVersion</key>
 		<string>%version%</string>
+		<key>CFBundleIdentifier</key>
+		<string>com.privateinternetaccess.vpn</string>
+		<key>CFBundleShortVersionString</key>
+		<string>%CFBundleVersion%</string>
 	</dict>
          </array>
        </dict>
