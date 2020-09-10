@@ -46,10 +46,10 @@
 			<key>Arguments</key>
 			<dict>
 				<key>additional_pkginfo</key>
-				<array/>
-				<key>installs</key>
 				<array>
 					<dict>
+						<key>installs</key>
+						<array/>
 						<key>path</key>
 						<string>/Applications/PrivateInternetAccess.app</string>
 					</dict>
