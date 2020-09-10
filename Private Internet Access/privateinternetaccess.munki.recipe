@@ -41,7 +41,29 @@
 	<key>ParentRecipe</key>
 	<string>com.github.dare-tech.download.privateinternetaccess</string>
 	<key>Process</key>
-	<array>
+	<dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>additional_pkginfo</key>
+				<dict/>
+				<key>installs</key>
+				<array>
+					<dict>
+						<key>CFBundleVersion</key>
+						<string>%version%</string>
+						<key>path</key>
+						<string>/Applications/Private Internet Access.app</string>
+						<key>type</key>
+						<string>application</string>
+						<key>version_comparison_key</key>
+						<string>CFBundleVersion</string>
+					</dict>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -52,6 +74,11 @@
 			</dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiPkginfoMerger</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -64,6 +91,6 @@
 			<key>Processor</key>
 			<string>MunkiImporter</string>
 		</dict>
-	</array>
+	</dict>
 </dict>
 </plist>
