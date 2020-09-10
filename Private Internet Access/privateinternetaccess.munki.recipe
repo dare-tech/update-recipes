@@ -46,7 +46,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>additional_pkginfo</key>
-				<dict/>
+				<dict>
 				<key>installs</key>
 				<array>
 					<dict>
