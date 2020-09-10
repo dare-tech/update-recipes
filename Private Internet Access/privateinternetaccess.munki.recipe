@@ -53,8 +53,10 @@
          <array>
            <dict>
              <key>path</key>
-             <string>/Applications/Private Internet Access.app</string>
-           </dict>
+		   <string>/Applications/Private Internet Access.app</string>
+		   <key>type</key>
+		   <string>application</string>
+	</dict>
          </array>
        </dict>
      </dict>
