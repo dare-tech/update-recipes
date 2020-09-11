@@ -13,7 +13,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Mac</string>
+		<string>Huddle</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,11 +21,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>macOS is a Unix-based operating system, developed and marketed by Apple Inc. It is designed to run on Macintosh computers, having been pre-installed on all Macs since 2002.</string>
+			<string>Team collaboration software for enterprise and government. Manage tasks, projects and documents simply in secure client portals with Huddle.</string>
 			<key>developer</key>
 			<string>Huddle</string>
 			<key>display_name</key>
-			<string>Mac</string>
+			<string>Huddle</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
