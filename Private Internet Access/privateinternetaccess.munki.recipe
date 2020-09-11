@@ -42,14 +42,6 @@
  <string>1.0</string>
  <key>ParentRecipe</key>
  <string>com.github.dare-tech.download.privateinternetaccess</string>
-	<key>postinstall_script</key>
-	<string>#!/bin/sh
-
-	/Applications/Private\ Internet\ Access\ Installer.app/Contents/MacOS/Private\ Internet\ Access --silentinstall
-
-	exit 0
-	</string>
-	
  <key>Process</key>
  <array>
    <dict>
