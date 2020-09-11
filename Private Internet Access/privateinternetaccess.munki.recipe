@@ -35,6 +35,8 @@
      <key>name</key>
      <string>%NAME%</string>
      <key>unattended_install</key>
+	   <key>CFBundleName</key>
+	   <string>%NAME%</string>
      <true/>
    </dict>
  </dict>
