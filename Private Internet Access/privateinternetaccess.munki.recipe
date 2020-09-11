@@ -66,6 +66,8 @@
 		<string>CFBundleVersion</string>
 	</dict>
          </array>
+	       <key>version</key>
+		<string>%version%</string>
        </dict>
      </dict>
      <key>Processor</key>
