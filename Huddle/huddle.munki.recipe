@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Mac and imports it into Munki.</string>
+	<string>Downloads the latest version of Huddle and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.munki.Mac</string>
+	<string>com.github.dare-tech.huddle.munki</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
@@ -37,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.download.Mac</string>
+	<string>com.github.dare-tech.huddle.download</string>
 	<key>Process</key>
 	<array>
 		<dict>
