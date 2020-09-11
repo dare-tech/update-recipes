@@ -35,8 +35,6 @@
      <key>name</key>
      <string>%NAME%</string>
      <key>unattended_install</key>
-	   <key>CFBundleName</key>
-	   <string>%NAME%</string>
      <true/>
    </dict>
  </dict>
@@ -66,6 +64,8 @@
 		<string>%version%</string>
 		<key>version_comparison_key</key>
 		<string>CFBundleVersion</string>
+		<key>CFBundleName</key>
+	   	<string>%NAME%</string>
 	</dict>
          </array>
 	       <key>version</key>
