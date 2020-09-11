@@ -13,7 +13,7 @@
 		<key>DOWNLOAD_URL</key>
 		<string>https://public.huddle.com/apps/huddledesktop/uk/Huddle.dmg</string>
 		<key>NAME</key>
-		<string>Mac</string>
+		<string>Huddle</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
