@@ -48,7 +48,7 @@
 				<key>overwrite</key>
 				<true/>
 				<key>source_path</key>
-				<string>%pathname%/Huddle.app</string>
+				<string>%pathname%/Install\ Huddle.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
