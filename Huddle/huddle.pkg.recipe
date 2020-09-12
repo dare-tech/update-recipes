@@ -91,7 +91,7 @@ huddleMount=$(/bin/ls /Volumes/ | /usr/bin/grep Huddle)
 
 # Install Huddle.app...
 /bin/echo "Installing ${huddleMount}..."
-/Volumes/"${huddleMount}"/Huddle.app/Contents/MacOS/Install\ Huddle -t /Applications/Huddle.app
+/Volumes/"${huddleMount}"/Install\ Huddle.app/Contents/MacOS/Install\ Huddle -t /Applications/Huddle.app
 /bin/sleep 2
 /bin/echo "${huddleMount} has been installed!"
 
