@@ -11,7 +11,7 @@
 		<key>BUNDLE_ID</key>
 		<string>com.huddle.Desktop.Mac.Installer</string>
 		<key>NAME</key>
-		<string>Huddle</string>
+		<string>Install Huddle</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -91,7 +91,7 @@ huddleMount=$(/bin/ls /Volumes/ | /usr/bin/grep Huddle)
 
 # Install Huddle.app...
 /bin/echo "Installing ${huddleMount}..."
-/Volumes/"${huddleMount}"/Install\ Huddle.app/Contents/MacOS/Install\ Huddle -t /Applications/Huddle.app
+/Volumes/"${huddleMount}"/Install\ Huddle.app/Contents/MacOS/Install\ Huddle
 /bin/sleep 2
 /bin/echo "${huddleMount} has been installed!"
 
