@@ -43,19 +43,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/Install\ Huddle.app</string>
-				<key>overwrite</key>
-				<true/>
-				<key>source_path</key>
-				<string>%pathname%/Install\ Huddle.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>faux_root</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
 				<key>installs_item_paths</key>
