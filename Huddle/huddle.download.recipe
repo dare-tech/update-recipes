@@ -2,12 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Huddle for Mac.</string>
+	<string>Downloads the latest version of Mac.</string>
 	<key>Identifier</key>
 	<string>com.github.dare-tech.huddle.download</string>
 	<key>Input</key>
 	<dict>
+		<key>APP_FILENAME</key>
+		<string>Install Huddle</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://public.huddle.com/apps/huddledesktop/uk/Huddle.dmg</string>
 		<key>NAME</key>
@@ -21,7 +25,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>Huddle.dmg</string>
+				<string>%NAME%.dmg</string>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 			</dict>
@@ -36,7 +40,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>/Users/dareupdate/Library/AutoPkg/Cache/local.munki.DARE.huddle/downloads/Huddle.dmg/Install\ Huddle.app</string>
+				<string>%pathname%/Install Huddle.app</string>
 				<key>requirement</key>
 				<string>identifier "com.huddle.Desktop.Mac.Installer" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "53VBZ37ZJS"</string>
 			</dict>
@@ -47,7 +51,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/Install\ Huddle.app/Contents/Info.plist</string>
+				<string>%pathname%/Install Huddle.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
