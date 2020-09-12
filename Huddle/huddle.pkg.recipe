@@ -2,20 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Mac and creates a package.</string>
+	<string>Downloads the latest version of Huddle and creates a package.</string>
 	<key>Identifier</key>
 	<string>com.github.dare-tech.huddle.pkg</string>
 	<key>Input</key>
 	<dict>
-		<key>APP_FILENAME</key>
-		<string>Install Huddle</string>
 		<key>BUNDLE_ID</key>
 		<string>com.huddle.Desktop.Mac.Installer</string>
 		<key>NAME</key>
-		<string>Mac</string>
+		<string>Huddle</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -24,8 +20,134 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict/>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+			</dict>
 			<key>Processor</key>
-			<string>AppPkgCreator</string>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict/>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/%NAME%.dmg</string>
+				<key>overwrite</key>
+				<true/>
+				<key>source_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>file_content</key>
+				<string>#!/bin/bash
+
+###################################################################################################
+#
+# Description:  This script installs Huddle
+#
+###################################################################################################
+
+/bin/echo "**************************************************"
+/bin/echo 'Starting PostInstall Script'
+/bin/echo "**************************************************"
+
+if [[ $3 != "/" ]]; then
+    /bin/echo "[ERROR] Target disk is not the startup disk."
+    exit 1
+fi
+
+# Set working directory
+pkgDir=$(/usr/bin/dirname $0)
+
+# Get the filename of the .dmg file (allows this script to be used with different versions).
+huddleDMG=$(/bin/ls $pkgDir | /usr/bin/grep .dmg)
+
+# Mounting the .dmg found...
+/bin/echo "Mounting ${huddleDMG}..."
+/usr/bin/hdiutil attach "${huddleDMG}" -nobrowse -noverify -noautoopen
+/bin/sleep 2
+
+# Get the name of the mount (allows this script to be used with different versions).
+huddleMount=$(/bin/ls /Volumes/ | /usr/bin/grep Huddle)
+
+# Install Huddle.app...
+/bin/echo "Installing ${huddleMount}..."
+/Volumes/"${huddleMount}"/Huddle.app/Contents/MacOS/Install\ Huddle -t /Applications/Huddle.app
+/bin/sleep 2
+/bin/echo "${huddleMount} has been installed!"
+
+# Ejecting the .dmg...
+/usr/bin/hdiutil eject /Volumes/"${huddleMount}"
+
+/bin/echo "**************************************************"
+/bin/echo 'PostInstall Script Finished'
+/bin/echo "**************************************************"
+
+exit 0</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+					<key>chown</key>
+					<array/>
+					<key>id</key>
+					<string>%BUNDLE_ID%</string>
+					<key>options</key>
+					<string>purge_ds_store</string>
+					<key>pkgname</key>
+					<string>%NAME%-%version%</string>
+					<key>pkgroot</key>
+					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+					<key>pkgtype</key>
+					<string>flat</string>
+					<key>scripts</key>
+					<string>Scripts</string>
+					<key>version</key>
+					<string>%version%</string>
+				</dict>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>path_list</key>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+					<string>%RECIPE_CACHE_DIR%/Scripts</string>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
 		</dict>
 	</array>
 </dict>
