@@ -8,8 +8,6 @@
 	<string>com.github.dare-tech.huddle.download</string>
 	<key>Input</key>
 	<dict>
-		<key>APP_FILENAME</key>
-		<string>Install\ Huddle</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://public.huddle.com/apps/huddledesktop/uk/Huddle.dmg</string>
 		<key>NAME</key>
