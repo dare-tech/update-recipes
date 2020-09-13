@@ -40,6 +40,37 @@
 	<string>com.github.dare-tech.huddle.pkg</string>
 	<key>Process</key>
 	<array>
+	<dict>
+     <key>Arguments</key>
+     <dict>
+       <key>additional_pkginfo</key>
+       <dict>
+         <key>installs</key>
+         <array>
+           <dict>
+             	<key>path</key>
+		<string>/Applications/Huddle.app</string>
+		<key>type</key>
+		<string>application</string>		
+		<key>CFBundleVersion</key>
+		<string>%version%</string>
+		<key>CFBundleIdentifier</key>
+		<string>net.huddle.desktop.mac</string>
+		<key>CFBundleShortVersionString</key>
+		<string>%version%</string>
+		<key>version_comparison_key</key>
+		<string>CFBundleVersion</string>
+		<key>CFBundleName</key>
+	   	<string>%NAME%</string>
+	</dict>
+         </array>
+	       <key>version</key>
+		<string>%version%</string>
+       </dict>
+	     <dict>
+			<key>Processor</key>
+			<string>MunkiPkginfoMerger</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -52,10 +83,6 @@
 			</dict>
 			<key>Processor</key>
 			<string>MunkiInstallsItemsCreator</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>MunkiPkginfoMerger</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
