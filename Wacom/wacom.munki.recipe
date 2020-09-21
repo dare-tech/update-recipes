@@ -55,7 +55,7 @@
 		<key>CFBundleVersion</key>
 		<string>%version%</string>
 		<key>CFBundleIdentifier</key>
-		<string>net.huddle.desktop.mac</string>
+		<string>com.wacom.Wacom-Desktop-Center</string>
 		<key>CFBundleShortVersionString</key>
 		<string>%version%</string>
 		<key>version_comparison_key</key>
