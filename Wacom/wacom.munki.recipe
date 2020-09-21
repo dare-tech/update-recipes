@@ -49,13 +49,13 @@
          <array>
            <dict>
              	<key>path</key>
-		<string>/Applications/Wacom\ Tablet.localized/Wacom\ Desktop\ Center.app</string>
+		<string>/Applications/Huddle.app</string>
 		<key>type</key>
 		<string>application</string>		
 		<key>CFBundleVersion</key>
 		<string>%version%</string>
 		<key>CFBundleIdentifier</key>
-		<string>com.wacom.Wacom-Desktop-Center</string>
+		<string>net.huddle.desktop.mac</string>
 		<key>CFBundleShortVersionString</key>
 		<string>%version%</string>
 		<key>version_comparison_key</key>
@@ -78,7 +78,7 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
 				<key>installs_item_paths</key>
 				<array>
-					<string>/Applications/Wacom\ Tablet.localized/Wacom\ Desktop\ Center.app/<string>
+					<string>/Applications/Huddle.app</string>
 				</array>
 			</dict>
 			<key>Processor</key>
