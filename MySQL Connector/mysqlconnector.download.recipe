@@ -23,7 +23,7 @@
         <key>url</key>
         <string>https://dev.mysql.com/downloads/connector/odbc/</string>
         <key>re_pattern</key>
-        <string>64bit.dmg</string>
+        <string>archives/\w-odbc//string>
       </dict>
 			</dict>
 			<dict>
