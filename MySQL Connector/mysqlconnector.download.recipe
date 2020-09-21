@@ -23,7 +23,7 @@
         <key>url</key>
         <string>https://dev.mysql.com/downloads/connector/odbc/</string>
         <key>re_pattern</key>
-        <string>/downloads/gpg/?file=mysql-connector-odbc-\d{1,2}.\d{1,2}.?\d{1,2}-macos\d{1,2}.\d{1,2}-x86-64bit.dmg</string>
+        <string>/downloads/file/.id=\d{0,6}</string>
       </dict>
 			</dict>
 			<dict>
