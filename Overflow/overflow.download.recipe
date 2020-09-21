@@ -32,7 +32,7 @@
 			<key>Arguments</key>
     	 <dict>
         <key>url</key>
-    		 <string>https://appupdates.overflow.io/packages/updates/osx_64/%match%</string>
+    		 <string>https://app-updates.overflow.io/packages/updates/osx_64/%match%</string>
     		 <key>filename</key>
     		 <string>%NAME%.dmg</string>
 		</dict>
