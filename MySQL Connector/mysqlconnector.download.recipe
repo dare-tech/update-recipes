@@ -23,7 +23,7 @@
         <key>url</key>
         <string>https://dev.mysql.com/downloads/connector/odbc/</string>
         <key>re_pattern</key>
-        <string>(mysql-connector-odbc-\d{1,2}.\d{1,2}.?\d{1,2}-macos\d\d.\d\d-x86-64bit.dmg)</string>
+        <string>macos\d\d.\d\d-x86-64bit.dmg</string>
       </dict>
 			</dict>
 			<dict>
