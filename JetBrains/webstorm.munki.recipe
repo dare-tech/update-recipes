@@ -33,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.mosen.download.WebStrom</string>
+	<string>com.github.mosen.download.WebStorm</string>
 	<key>Process</key>
 	<array>
 		<dict>
