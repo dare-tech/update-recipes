@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Download the latest release of WebStorm</string>
     <key>Identifier</key>
-    <string>com.github.dare-tech.download.webstorm</string>
+    <string>com.github.dare-tech.webstorm.download</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
