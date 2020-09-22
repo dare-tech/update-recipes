@@ -15,7 +15,7 @@
 	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
-			key>Processor</key>
+	<key>Processor</key>
             <string>JetbrainsURLProvider</string>
             <key>Arguments</key>
             <dict>
