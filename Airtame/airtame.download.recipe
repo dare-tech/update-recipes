@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest DMG version of Airtame.</string>
 	<key>Identifier</key>
-	<string>com.github.dare.tech.airtame.download</string>
+	<string>com.github.dare-tech.airtame.download</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
