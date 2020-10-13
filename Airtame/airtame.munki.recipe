@@ -33,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>tecnico1931.download.Airtame/string>
+	<string>tecnico1931.download.Airtame</string>
 	<key>Process</key>
 	<array>
 		<dict>
