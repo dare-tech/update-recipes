@@ -2,29 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Description</key>
 	<string>Downloads the latest version of Airtame and imports it into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.dare-tech.airtame.munki</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_CATEGORY</key>
-		<string>Software</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Airtame</string>
+		<string>Webstorm</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>%MUNKI_CATEGORY%</string>
 			<key>description</key>
 			<string>Present wirelessly from any device, introduce digital signage and revolutionize your work environment with Airtame.</string>
 			<key>developer</key>
-			<string>Airtame Inc.</string>
+			<string>Airtame</string>
 			<key>display_name</key>
 			<string>Airtame</string>
 			<key>name</key>
@@ -36,9 +33,18 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>tecnico1931.download.Airtame</string>
+	<string>tecnico1931.download.Airtame/string>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
