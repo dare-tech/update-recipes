@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://downloads-website.airtame.com/get.php?platform=mac&amp/string>
+		<string>https://downloads-website.airtame.com/get.php?platform=mac&amp</string>
 		<key>NAME</key>
 		<string>Airtame</string>
 	</dict>
