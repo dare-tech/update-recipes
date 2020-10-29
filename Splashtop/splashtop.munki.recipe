@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</string>
+	<string>Downloads latest version of Splashtop SOS and builds a package.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.virtualbox.munki</string>
+	<string>com.github.nstrauss.pkg.SplashtopSOS</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>VirtualBox</string>
+		<string>Splashtop SOS</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,11 +19,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</string>
+			<string>Remote support toll for macOS support</string>
 			<key>developer</key>
-			<string>Oracle</string>
+			<string>Splashtop</string>
 			<key>display_name</key>
-			<string>VirtualBox</string>
+			<string>SplashtopSOS</string>
 			<key>minimum_os_version</key>
 			<string>10.10</string>
 			<key>name</key>
@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.sheagcraig.pkg.VirtualBox</string>
+	<string>com.github.nstrauss.pkg.SplashtopSOS</string>
 	<key>Process</key>
 	<array>
 	<dict>
@@ -49,13 +49,13 @@
          <array>
            <dict>
              	<key>path</key>
-		<string>/Applications/VirtualBox.app</string>
+		<string>/Applications/Splashtop SOS.app</string>
 		<key>type</key>
 		<string>application</string>		
 		<key>CFBundleVersion</key>
 		<string>%version%</string>
 		<key>CFBundleIdentifier</key>
-		<string>org.virtualbox.app.VirtualBox</string>
+		<string>com.splashtop.Splashtop-SOS</string>
 		<key>CFBundleShortVersionString</key>
 		<string>%version%</string>
 		<key>version_comparison_key</key>
@@ -78,7 +78,7 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
 				<key>installs_item_paths</key>
 				<array>
-					<string>/Applications/VirtualBox.app</string>
+					<string>/Applications/Splashtop SOS.app</string>
 				</array>
 			</dict>
 			<key>Processor</key>
