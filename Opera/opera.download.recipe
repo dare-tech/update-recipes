@@ -21,7 +21,7 @@
     	 <key>Arguments</key>
     	 <dict>
         <key>url</key>
-    		 <string>https://download.opera.com/download/get/?partner=www&opsys=MacOS</string>
+    		 <string>https://download.opera.com/download/get/?partner=www&amp;opsys=MacOS</string>
     		 <key>filename</key>
     		 <string>%NAME%.zip</string>
     	 </dict>
