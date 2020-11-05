@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
-		<string>Opera Installer</string>
+		<string>Opera Installer.zip</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://download.opera.com/download/get/?partner=www&amp;opsys=MacOS</string>
 		<key>NAME</key>
