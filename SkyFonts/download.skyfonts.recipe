@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of SkyFonts</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.download.SkyFonts</string>
+	<string>com.github.dare-tech.download.skyfonts</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
