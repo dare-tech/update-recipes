@@ -23,7 +23,7 @@
         <key>url</key>
         <string>https://overflow.io/download/mac/</string>
         <key>re_pattern</key>
-        <string>[a-z\d]{0,50}/Overflow-\d\.\d\.?[\d]?\.dmg</string>
+        <string>[a-z\d]{0,50}/Overflow-\d\.\d{1,2}\.?[\d]?\.dmg</string>
       </dict>
 			</dict>
 			<dict>
