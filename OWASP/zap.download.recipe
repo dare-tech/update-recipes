@@ -23,7 +23,7 @@
         <key>url</key>
         <string>https://www.zaproxy.org/download/</string>
         <key>re_pattern</key>
-        <string>(\d\.\d\.?[\d]?).dmg</string>
+        <string>(\d\.\d{1,2}.?[\d]?).dmg</string>
         <key>result_output_var_name</key>
         <string>version</string>
       </dict>
