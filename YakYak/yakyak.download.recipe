@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>.*\.zip$</string>
+				<string>yakyak-.+-osx.x64.zip</string>
 				<key>github_repo</key>
 				<string>yakyak/yakyak</string>
 			</dict>
