@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Numi.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.download.numi</string>
+	<string>com.github.dare-tech.numi.download</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
