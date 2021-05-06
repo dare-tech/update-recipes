@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.download.barnone</string>
+	<string>com.github.dare-tech.pkg.barnone</string>
 	<key>Process</key>
 	<array>
 		<dict>
