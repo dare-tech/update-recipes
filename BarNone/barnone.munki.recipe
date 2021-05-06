@@ -55,7 +55,7 @@
 				<key>pkg_path</key>
 				<string>%dmg_path%</string>
 				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
+				<string>%MUNKI_REPO_SUBDIR%/%NAME%</string>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
