@@ -41,21 +41,19 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>faux_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
-				<key>installs_item_paths</key>
-				<array>
-					<string>/Applications/Bar None.app</string>
-				</array>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 			</dict>
 			<key>Processor</key>
-			<string>MunkiInstallsItemsCreator</string>
+			<string>DmgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%pkg_path%</string>
+				<string>%dmg_path%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
