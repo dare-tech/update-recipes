@@ -20,15 +20,6 @@
 			<dict>
 				<key>Arguments</key>
 				<dict>
-					<key>purge_destination</key>
-					<true/>
-				</dict>
-				<key>Processor</key>
-				<string>Unarchiver</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<dict>
 					<key>pattern</key>
 					<string>%RECIPE_CACHE_DIR%/%NAME%/*.app</string>
 				</dict>
