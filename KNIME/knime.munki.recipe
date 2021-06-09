@@ -42,14 +42,14 @@ exit $?</string>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.blackthroat.pkg.KNIME_Analytics_Platform</string>
+	<string>com.github.ahousseini-recipes.pkg.KNIME</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%</string>
+				<string>%MUNKI_REPO_SUBDIR%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
