@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Imports the latest version of KNIME into Munki</string>
+	<string>Downloads the latest version of KNIME Analytics Platform and imports it into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.dare-tech.munki.knime</string>
 	<key>Input</key>
@@ -19,19 +19,24 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Software That Automates Finance Analysis Using An Intuitive Environment.</string>
+			<string>KNIME Analytics Platform is the leading open solution for data-driven innovation, helping you discover the potential hidden in your data, mine for fresh insights, or predict new futures. Our enterprise-grade, open source platform is fast to deploy, easy to scale, and intuitive to learn.</string>
 			<key>developer</key>
-			<string>KNIME</string>
+			<string>KNIME GmbH</string>
 			<key>display_name</key>
-			<string>KNIME</string>
+			<string>KNIME Analytics Platform</string>
 			<key>minimum_os_version</key>
-			<string>10.10</string>
+			<string>10.11</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>preinstall_script</key>
+			<string>#!/bin/sh
+
+echo "Removing old copies of KNIME Analytics Platform from the /Applications folder..."
+rm -rf /Applications/KNIME\ *.app
+
+exit $?</string>
 			<key>unattended_install</key>
 			<true/>
-			<key>uninstall_method</key>
-			<string>uninstall_script</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
@@ -44,7 +49,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%pkg_path%</string>
+				<string>%pathname%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
