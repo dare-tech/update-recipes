@@ -39,6 +39,7 @@
 	<key>ParentRecipe</key>
 	<string>com.github.blackthroat.pkg.KNIME_Analytics_Platform</string>
 	<key>Process</key>
+	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -50,5 +51,6 @@
 			<key>Processor</key>
 			<string>MunkiImporter</string>
 		</dict>
+	</array>
 </dict>
 </plist>
