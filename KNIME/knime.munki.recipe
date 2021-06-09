@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.blackthroat.pkg.KNIME_Analytics_Platfom</string>
+	<string>com.github.blackthroat.pkg.KNIME_Analytics_Platform</string>
 	<key>Process</key>
 		<dict>
 			<key>Arguments</key>
