@@ -40,10 +40,6 @@
 	<string>com.github.blackthroat.pkg.KNIME_Analytics_Platfom</string>
 	<key>Process</key>
 	<array>
-	<dict>
-			<key>Processor</key>
-			<string>MunkiInstallsItemsCreator</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
