@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Imports the latest version of KNIME into Munki</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.knime.munki</string>
+	<string>com.github.dare-tech.munki.knime</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
