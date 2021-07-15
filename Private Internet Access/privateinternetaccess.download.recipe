@@ -9,7 +9,7 @@
   <key>Input</key>
   <dict>
     <key>NAME</key>
-    <string>PrivateInternetAccess</string>
+    <string>Private Internet Access</string>
   </dict>
   <key>MinimumVersion</key>
   <string>0.8.0</string>
