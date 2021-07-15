@@ -49,6 +49,7 @@
         <key>purge_destination</key>
         <true/>
       </dict>
+    </dict>
     <dict>
 			<key>Arguments</key>
 			<dict>
@@ -63,7 +64,6 @@
     <dict>
       <key>Processor</key>
       <string>EndOfCheckPhase</string>
-    </dict>
     </dict>
     <dict>
       <key>Processor</key>
