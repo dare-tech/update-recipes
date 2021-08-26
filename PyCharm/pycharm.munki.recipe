@@ -37,7 +37,7 @@
   <key>MinimumVersion</key>
   <string>0.2.9</string>
   <key>ParentRecipe</key>
-  <string>com.github.hansen-m.download.pycharm</string>
+  <string>com.github.dare.tech.download.pycharm</string>
   <key>Process</key>
   <array>
     <dict>
