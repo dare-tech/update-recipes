@@ -11,8 +11,6 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>jetbrains/%NAME%</string>
 		<key>NAME</key>
-		<key>force_munkiimport</key>
-		<true />
 		<string>Pycharm</string>
 		<key>pkginfo</key>
 		<dict>
@@ -45,6 +43,8 @@
 				<string>%pathname%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>force_munkiimport</key>
+				<true/>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
