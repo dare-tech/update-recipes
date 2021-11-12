@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Lingo and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.munki.lingo</string>
+	<string>com.github.dare-tech.munki.rstudio</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Lingo</string>
+		<string>RStudio</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,11 +19,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Lingo combines the power of a digital asset manager with the context of a style guide. It makes you and your team more productive. All while ensuring brand consistency.</string>
+			<string>Downloads the latest version of RStudio and imports into Munki</string>
 			<key>developer</key>
-			<string>Noun Project</string>
+			<string>RStudio</string>
 			<key>display_name</key>
-			<string>Lingo</string>
+			<string>RStudio</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -33,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.download.lingo</string>
+	<string>com.github.rtrouton.download.RStudio</string>
 	<key>Process</key>
 	<array>
 		<dict>
