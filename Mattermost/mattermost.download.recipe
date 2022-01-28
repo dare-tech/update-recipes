@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>.*universal\.dmg$</string>
+				<string>.*mac-universal.dmg</string>
 				<key>github_repo</key>
 				<string>mattermost/desktop</string>
 			</dict>
