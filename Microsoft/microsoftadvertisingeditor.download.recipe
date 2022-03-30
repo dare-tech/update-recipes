@@ -5,49 +5,54 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Microsoft Advertising Editor and imports it into Munki.</string>
+	<string>Downloads the latest version of Microsoft Advertising Editor.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.MicrosoftAdvertisingEditor.munki</string>
+	<string>com.github.dare-tech.download.MicrosoftAdvertisingEditor</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
 		<key>NAME</key>
 		<string>Microsoft Advertising Editor</string>
-		<key>pkginfo</key>
-		<dict>
-			<key>catalogs</key>
-			<array>
-				<string>testing</string>
-			</array>
-			<key>description</key>
-			<string> </string>
-			<key>developer</key>
-			<string>Microsoft Corporation</string>
-			<key>display_name</key>
-			<string>Microsoft Advertising Editor</string>
-			<key>name</key>
-			<string>%NAME%</string>
-			<key>unattended_install</key>
-			<true/>
-		</dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
-	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.download.MicrosoftAdvertisingEditor</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_path</key>
-				<string>%pathname%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>https://aka.ms/baemacproddownload</string>
 			</dict>
 			<key>Processor</key>
-			<string>MunkiImporter</string>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/Microsoft Advertising Editor.app</string>
+				<key>requirement</key>
+				<string>identifier "Microsoft.AdvertisingDesktop.BingAdsEditor" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/Microsoft Advertising Editor.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
 		</dict>
 	</array>
 </dict>
