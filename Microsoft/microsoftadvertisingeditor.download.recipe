@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Microsoft Advertising Editor and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.munki.MicrosoftAdvertisingEditor</string>
+	<string>com.github.dare-tech.MicrosoftAdvertisingEditor.munki</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
