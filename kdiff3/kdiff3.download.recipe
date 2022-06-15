@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Kdiff.</string>
+	<string>Downloads the latest version of Kdiff3</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.download.kdiff</string>
+	<string>com.github.dare-tech.download.kdiff3</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Kdiff</string>
+		<string>Kdiff3</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
