@@ -14,7 +14,7 @@
 	
 	</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.download.IntelliJIDEA</string>
+	<string>com.github.dare-tech.download.IntelliJ</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
