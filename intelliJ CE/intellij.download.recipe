@@ -34,7 +34,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://data.services.jetbrains.com/products/download?code=IIC&amp;platform=%PLATFROM_ARCH%</string>
+				<string>https://data.services.jetbrains.com/products/download?code=IIC&amp;platform=%PLATFORM_ARCH%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
