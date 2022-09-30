@@ -24,7 +24,6 @@
         <string>https://github.com/MehediH/Tweeten/releases/</string>
         <key>re_pattern</key>
         <string>(download/v(\d\.\d\.\d)/tweeten-darwin-x64.zip)</string>
-        </string>
 	      <key>result_output_var_name</key>
 	      <string>version</string>
       </dict>
