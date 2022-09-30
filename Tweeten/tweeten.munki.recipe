@@ -2,56 +2,52 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the current release version of Tweeten and imports into Munki.</string>
+	<string>Downloads the latest version of Tweeten and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.munki.tweeten</string>
+	<string>com.github.dare-tech.munki.Tweeten</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>Tweeten</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Tweeten</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>Applications</string>
+			<key>description</key>
+			<string>An intuitive and powerful Twitter experience built for those who get real work done.</string>
 			<key>developer</key>
 			<string>Mehedi Hassan</string>
-			<key>description</key>
-			<string>An intuitive and powerful Twitter experience built for those who get real work done. Get the most powerful TweetDeck experience without worrying about the limits. Ever.</string>
 			<key>display_name</key>
 			<string>Tweeten</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
-			<key>blocking_applications</key>
-			<array>
-				<string>Tweeten.app</string>
-			</array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.download.tweeten</string>
+	<string>com.github.dare-tech.download.Tweeten</string>
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>dmg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 			</dict>
+			<key>Processor</key>
+			<string>DmgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
