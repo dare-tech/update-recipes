@@ -23,7 +23,7 @@
         <key>url</key>
         <string>https://github.com/MehediH/Tweeten/releases</string>
         <key>re_pattern</key>
-        <string>/releases/download/v(\d\.\d\.\d)/tweeten-darwin-x64.zip</string>
+        <string>/download/v(\d\.\d\.\d)/tweeten-darwin-x64.zip</string>
       </dict>
     </dict>
     <dict>
@@ -32,7 +32,7 @@
     	 <key>Arguments</key>
     	 <dict>
         <key>url</key>
-    		 <string>https://github.com/MehediH/Tweeten%match%</string>
+    		 <string>https://github.com/MehediH/Tweeten/releases/%match%</string>
     		 <key>filename</key>
     		 <string>%NAME%.zip</string>
     	 </dict>
