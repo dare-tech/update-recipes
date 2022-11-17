@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of DARE Update</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.download.Dareupdate</string>
+	<string>com.github.dare-tech.download.dareupdate</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
