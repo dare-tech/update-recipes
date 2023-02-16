@@ -3,13 +3,22 @@
 <plist version="1.0">
 <dict>
   <key>Description</key>
-  <string>Downloads the latest version of DbVisualizer.</string>
+  <string>Downloads the latest version of DbVisualizer.
+  
+  Acceptable values for PLATFORM_ARCH include:
+	
+	- 'x64' : Downloads the Intel version of DbVisualizer. (This is the default.)
+	- 'aarch64' : Downloads the Apple Silicon version of DbVisualizer.
+  
+  </string>
   <key>Identifier</key>
   <string>com.github.dare-tech.download.dbvisualizer</string>
   <key>Input</key>
   <dict>
     <key>NAME</key>
     <string>DbVisualizer</string>
+    <key>PLATFORM_ARCH</key>
+		<string>x64</string>
   </dict>
   <key>MinimumVersion</key>
   <string>1.0.0</string>
@@ -23,7 +32,7 @@
         <key>url</key>
         <string>https://www.dbvis.com/download/</string>
         <key>re_pattern</key>
-        <string>(dbvis-\d{1,2}\.\d\.?[\d{1,2}]?/media/dbvis_macos_\d{1,2}\_\d\_?[\d{1,2}]?).tgz</string>
+        <string>(dbvis-\d{1,2}\.\d\.?[\d{1,2}]?/media/dbvis_macos-%PLATFORM_ARCH%_\d{1,2}\_\d\_?[\d{1,2}]?).dmg</string>
         <key>result_output_var_name</key>
         <string>version</string>
       </dict>
@@ -34,7 +43,7 @@
     	 <key>Arguments</key>
     	 <dict>
         <key>url</key>
-    		 <string>https://dbvis.com/product_download/%version%.tgz</string>
+    		 <string>https://dbvis.com/product_download/%version%.dmg</string>
     	 </dict>
     </dict>
     <dict>
