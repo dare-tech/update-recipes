@@ -42,9 +42,11 @@
     	 <string>URLDownloader</string>
     	 <key>Arguments</key>
     	 <dict>
-        <key>url</key>
-    		 <string>https://dbvis.com/product_download/%version%.dmg</string>
-    	 </dict>
+        	<key>url</key>
+    		<string>https://dbvis.com/product_download/%version%.dmg</string>
+		<key>filename</key>
+		<string>%NAME%.dmg</string>
+    	</dict>
     </dict>
     <dict>
       <key>Processor</key>
