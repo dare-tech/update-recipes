@@ -43,6 +43,50 @@
 	<string>com.github.dare-tech.download.CatoClient</string>
 	<key>Process</key>
 	<array>
+			<dict>
+     <key>Arguments</key>
+     <dict>
+       <key>additional_pkginfo</key>
+       <dict>
+         <key>installs</key>
+         <array>
+           <dict>
+             	<key>path</key>
+		<string>/Applications/CatoClient.app</string>
+		<key>type</key>
+		<string>application</string>		
+		<key>CFBundleVersion</key>
+		<string>%version%</string>
+		<key>CFBundleIdentifier</key>
+		<string>com.catonetworks.mac.CatoClient</string>
+		<key>CFBundleShortVersionString</key>
+		<string>%version%</string>
+		<key>version_comparison_key</key>
+		<string>CFBundleVersion</string>
+		<key>CFBundleName</key>
+	   	<string>%NAME%</string>
+	</dict>
+         </array>
+	       <key>version</key>
+		<string>%version%</string>
+       </dict>
+	     </dict>
+     <key>Processor</key>
+     <string>MunkiPkginfoMerger</string>
+   </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>faux_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
+				<key>installs_item_paths</key>
+				<array>
+					<string>/Applications/CatoClient.app</string>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiInstallsItemsCreator</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
