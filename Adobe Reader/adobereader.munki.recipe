@@ -112,10 +112,6 @@ exit 0
 			<string>FileFinder</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>MunkiPkginfoMerger</string>
-		</dict>
-		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
