@@ -62,7 +62,7 @@
 		<key>CFBundleShortVersionString</key>
 		<string>%version%</string>
 		<key>version_comparison_key</key>
-		<string>CFBundleVersion</string>
+		<string>CFBundleShortVersionString</string>
 		<key>CFBundleName</key>
 	   	<string>%NAME%</string>
 	</dict>
