@@ -19,7 +19,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Debookee is able to intercept and monitor the traffic of any device in the same subnet, thanks to a Man-in-the-middle attack (MITM). The simplest & most powerful network traffic analyzer for macOS.</string>
+			<string>Debookee is able to intercept and monitor the traffic of any device in the same subnet, thanks to a Man-in-the-middle attack. The simplest and most powerful network traffic analyzer for macOS.</string>
 			<key>developer</key>
 			<string>iwaxx</string>
 			<key>display_name</key>
