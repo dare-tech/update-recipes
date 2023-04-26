@@ -8,7 +8,7 @@
 	<string>com.github.dare-tech.munki.CrossOver</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_REPO_SUBDIR</key>Cricut
+		<key>MUNKI_REPO_SUBDIR</key>
 		<string>%NAME%</string>
 		<key>NAME</key>
 		<string>CrossOver</string>
