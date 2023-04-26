@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Debookee and imports it into Munki.</string>
 	<key>Identifier</key>
@@ -11,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
+		<string>%NAME%</string>
 		<key>NAME</key>
 		<string>Debookee</string>
 		<key>pkginfo</key>
@@ -21,9 +19,9 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>Debookee is able to intercept and monitor the traffic of any device in the same subnet, thanks to a Man-in-the-middle attack (MITM). The simplest & most powerful network traffic analyzer for macOS.</string>
 			<key>developer</key>
-			<string>iwaxx Sarl</string>
+			<string>iwaxx</string>
 			<key>display_name</key>
 			<string>Debookee</string>
 			<key>name</key>
@@ -35,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.download.Debookee</string>
+	<string>com.github.ahousseini-recipes.download.Debookee</string>
 	<key>Process</key>
 	<array>
 		<dict>
