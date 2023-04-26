@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.homebysix.pkg.VirtualBox</string>
+	<string>com.github.dare-tech.virtualbox.download</string>
 	<key>Process</key>
 	<array>
 	<dict>
