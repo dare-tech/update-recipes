@@ -23,7 +23,7 @@
       <key>Arguments</key>
       <dict>
         <key>url</key>
-        <string>https://gyazo.com/download?lang=en</string>
+        <string>https://gyazo.com/download/</string>
         <key>re_pattern</key>
         <string>Gyazo-[\0-9\_]*.pkg</string>
       </dict>
