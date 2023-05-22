@@ -25,7 +25,7 @@
                 <key>url</key>
                 <string>https://www.dragonframe.com/downloads/</string>
                 <key>re_pattern</key>
-                <string>Dragonframe_%MAJOR_VERSION%.[\0-9\_]*.pkg</string>
+                <string>Dragonframe_5.[\0-9\_]*.pkg</string>
                 <key>result_output_var_name</key>
                 <string>match</string>
             </dict>
