@@ -16,7 +16,6 @@
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>com.perimeter81d.app</string>
 				<string>Perimeter 81.app</string>
 			</array>
 			<key>catalogs</key>
