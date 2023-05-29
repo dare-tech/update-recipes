@@ -36,7 +36,7 @@ Expected uses of this recipe:
 		<dict>
 			<key>catalogs</key>
 			<array>
-				<string>development-phaseone-%NAME%%MARKETING_VERSION%</string>
+				<string>test</string>
 			</array>
 			<key>category</key>
 			<string>Productivity</string>
