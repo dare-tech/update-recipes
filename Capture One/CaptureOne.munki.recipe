@@ -21,7 +21,7 @@ Expected uses of this recipe:
 - Capture One perpetual and Capture One subscription are in use: Recipe left in default state (STOP_ON_NO_NEW_DOWNLOAD is true, FORCE_MUNKIIMPORT is set)
 - Only Capture One perpetual licensing is in use: STOP_ON_NO_NEW_DOWNLOAD is overridden to false, FORCE_MUNKIIMPORT is overridden to a null/empty string (although the behavior _should_ be acceptable even if these variables are not overridden)</string>
 	<key>Identifier</key>
-	<string>com.github.foigus.munki.CaptureOne</string>
+	<string>com.github.dare-tech.munki.CaptureOne</string>
 	<key>Input</key>
 	<dict>
 		<key>FORCE_MUNKIIMPORT</key>
