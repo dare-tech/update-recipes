@@ -45,9 +45,9 @@ Expected uses of this recipe:
 			<key>developer</key>
 			<string>Phase One</string>
 			<key>display_name</key>
-			<string>Capture One %MARKETING_VERSION%</string>
+			<string>Capture One</string>
 			<key>name</key>
-			<string>%NAME%%MARKETING_VERSION%</string>
+			<string>CaptureOneSubscription</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
