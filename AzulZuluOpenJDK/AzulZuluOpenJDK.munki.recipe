@@ -5,13 +5,11 @@
     <key>Description</key>
     <string>Downloads the current release version of Azul Zulu OpenJDK, builds a package and imports it to Munki.</string>
     <key>Identifier</key>
-    <string>com.github.dare-tech.munki.AzulZuluOpenJDK</string>
+    <string>com.github.dataJAR-recipes.munki.Azul Zulu OpenJDK</string>
     <key>Input</key>
     <dict>
-    	<key>MAJOR_VERSION</key>
-        <string>11</string>
         <key>NAME</key>
-        <string>AzulZuluOpenJDK%MAJOR_VERSION%LTS</string>
+        <string>AzulZuluOpenJDK%MAJOR_VERSION%</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps</string>
         <key>pkginfo</key>
@@ -34,7 +32,7 @@
             <true/>
             <key>unattended_uninstall</key>
             <true/>
-		</dict>
+        </dict>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.3</string>
@@ -98,7 +96,7 @@
                     <string>/Library/Java/JavaVirtualMachines/zulu-%MAJOR_VERSION%.jdk</string>
                 </array>
                 <key>version_comparison_key</key>
-                <string>CFBundleName</string>
+                <string>CFBundleVersion</string>
             </dict>
         </dict>
         <dict>
@@ -114,7 +112,7 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%/Library/Java/JavaVirtualMachines/zulu-%MAJOR_VERSION%.jdk/Contents/Info.plist</string>
                 <key>plist_keys</key>
                 <dict>
-                    <key>CFBundleName</key>
+                    <key>CFBundleVersion</key>
                     <string>version</string>
                 </dict>
             </dict>
