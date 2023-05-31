@@ -8,6 +8,8 @@
     <string>com.github.dare-tech.munki.AzulZuluOpenJDK</string>
     <key>Input</key>
     <dict>
+    	<key>MAJOR_VERSION</key>
+        <string>11</string>
         <key>NAME</key>
         <string>AzulZuluOpenJDK%MAJOR_VERSION%LTS</string>
         <key>MUNKI_REPO_SUBDIR</key>
