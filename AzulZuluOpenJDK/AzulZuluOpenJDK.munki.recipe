@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of Azul Zulu OpenJDK, builds a package and imports it to Munki.</string>
     <key>Identifier</key>
-    <string>com.github.dataJAR-recipes.munki.Azul Zulu OpenJDK</string>
+    <string>com.github.dare-tech.munki.AzulZuluOpenJDK</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
