@@ -16,26 +16,27 @@
 	<key>Process</key>
 	<array>
 		<dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-               <key>url</key>
-               <string>https://protonvpn.com/download-macos</string>
-               <key>re_pattern</key>
-               <string>ProtonVPN_mac_v[\0-9\_]*.dmg</string>
-            </dict>
-         </dict>
-         <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-               <key>url</key>
-               <string>https://protonvpn.com/download/%match%</string>
-               <key>filename</key>
-               <string>%NAME%.dmg</string>
-        </dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://protonvpn.com/download-macos</string>
+				<key>re_pattern</key>
+				<string>ProtonVPN_mac_v[\0-9\_]*.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://protonvpn.com/download/%match%/</string>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+			</dict>
+		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
