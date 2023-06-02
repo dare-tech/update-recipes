@@ -9,9 +9,11 @@
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>%NAME%</string>
+		<string>apps/%NAME%</string>
 		<key>NAME</key>
 		<string>Anki</string>
+		<key>PLATFORM_ARCH</key>
+		<string>intel</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,32 +21,27 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Anki is a program which makes remembering things easy. Because it's a lot more efficient than traditional study methods, you can either greatly decrease your time spent studying, or greatly increase the amount you learn.</string>
+			<string>Anki for desktop computers</string>
 			<key>developer</key>
-			<string>Ankitects</string>
+			<string>Ankitects Pty Ltd</string>
 			<key>display_name</key>
 			<string>Anki</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>supported_architectures</key>
+			<array>
+			<string>x86_64</string>
+			</array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.nstrauss.download.Anki</string>
+	<string>com.github.dare-tech.download.Anki</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
