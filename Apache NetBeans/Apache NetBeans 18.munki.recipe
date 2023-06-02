@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Apache NetBeans 18 and imports it into Munki.</string>
+	<string>Downloads the latest version of Apache NetBeans and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.munki.ApacheNetBeans18</string>
+	<string>com.github.dare-tech.munki.ApacheNetBeans</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -16,10 +14,6 @@
 		<string>Apache NetBeans 18</string>
 		<key>pkginfo</key>
 		<dict>
-			<key>blocking_applications</key>
-			<array>
-				<string>Apache NetBeans 18.app</string>
-			</array>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
@@ -29,7 +23,7 @@
 			<key>developer</key>
 			<string>The Apache Software Foundation</string>
 			<key>display_name</key>
-			<string>Apache NetBeans 18</string>
+			<string>Apache NetBeans</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -39,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dare-tech.download.ApacheNetBeans18</string>
+	<string>com.github.dare-tech.download.ApacheNetBeans</string>
 	<key>Process</key>
 	<array>
 		<dict>

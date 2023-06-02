@@ -2,31 +2,42 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Apache NetBeans 18.</string>
+	<string>Downloads the latest version of Apache NetBeans</string>
 	<key>Identifier</key>
-	<string>com.github.dare-tech.download.ApacheNetBeans18</string>
+	<string>com.github.dare-tech.download.ApacheNetBeans</string>
 	<key>Input</key>
 	<dict>
+		<key>MAJORVERSION</key>
+		<string>18</string>
 		<key>NAME</key>
-		<string>Apache NetBeans 18</string>
+		<string>Apache NetBeans</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://dlcdn.apache.org/netbeans/netbeans-installers/18/Apache-NetBeans-18-bin-macosx.dmg</string>
+				<string>https://www.apache.org/dyn/closer.cgi/netbeans/netbeans-installers/%MAJORVERSION%/Apache-NetBeans-%MAJORVERSION%-bin-macosx.dmg</string>
+				<key>re_pattern</key>
+				<string>[\0-9\_]*Apache-NetBeans-[\0-9\_]*-bin-macosx.dmg</string>
 			</dict>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://dlcdn.apache.org/netbeans/netbeans-installers/%match%</string>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
