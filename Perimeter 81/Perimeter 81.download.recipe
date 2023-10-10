@@ -48,9 +48,9 @@
 			<dict>
 				<key>expected_authority_names</key>
 				<array>
-					<string>Developer ID Installer: Safer Social Ltd. (924635PD62)</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
+		                    <string>Developer ID Installer: Perimeter 81 LTD (924635PD62)</string>
+		                    <string>Developer ID Certification Authority</string>
+		                    <string>Apple Root CA</string>
 				</array>
 				<key>input_path</key>
 				<string>%pathname%</string>
