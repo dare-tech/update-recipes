@@ -19,9 +19,9 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Sales qualification tool.</string>
+			<string>Releases for the Close macOS and Windows Desktop application</string>
 			<key>developer</key>
-			<string>Elastic</string>
+			<string>Elastic Inc</string>
 			<key>display_name</key>
 			<string>Close</string>
 			<key>name</key>
@@ -36,15 +36,6 @@
 	<string>com.github.dare-tech.download.close</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
