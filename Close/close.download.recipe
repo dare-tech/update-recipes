@@ -3,13 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Close.</string>
+	<string>Downloads the latest version of Close</string>
 	<key>Identifier</key>
 	<string>com.github.dare-tech.download.close</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_URL</key>
-		<string>https://app.close.com/download/</string>
 		<key>NAME</key>
 		<string>Close</string>
 	</dict>
@@ -20,10 +18,19 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>asset_regex</key>
+				<string>.*\.dmg$</string>
+				<key>github_repo</key>
+				<string>closeio/closeio-desktop-releases</string>
+			</dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
-				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<string>%NAME%-%version%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
