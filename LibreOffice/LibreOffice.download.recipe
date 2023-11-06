@@ -32,7 +32,7 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>https://www.libreoffice.org/donate/dl/mac-x86_64/.*/en-GB/LibreOffice_.*_MacOS_%ARCH%.dmg</string>
+				<string>https://www.libreoffice.org/donate/dl/mac-x86_64/[0-9].[0-9].[0-9]/en-GB/LibreOffice_[0-9].[0-9].[0-9]_MacOS_%ARCH%.dmg</string>
 				<key>url</key>
 				<string>https://www.libreoffice.org/download/download-libreoffice/</string>
 			</dict>
