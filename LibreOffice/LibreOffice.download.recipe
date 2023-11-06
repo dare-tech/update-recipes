@@ -51,7 +51,7 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.libreoffice.org/donate/dl/mac-x86_64/%version%/en-GB/LibreOffice_%version%_MacOS_%ARCH%.dmg</string>
+				<string>https://www.libreoffice.org/donate/dl/mac-x86_64/%match%/en-GB/LibreOffice_%match%_MacOS_%ARCH%.dmg</string>
 				<key>filename</key>
 				<string>%NAME%-%ARCH%.dmg</string>
 			</dict>
