@@ -18,7 +18,7 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 		<key>RELEASE</key>
 		<string>fresh</string>
 		<key>ARCH</key>
-		<string>x86_64</string>
+		<string>x86-64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
