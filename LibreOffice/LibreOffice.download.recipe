@@ -18,6 +18,8 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 		<key>RELEASE</key>
 		<string>fresh</string>
 		<key>ARCH</key>
+		<string>x86_64</string>
+		<key>aux_arch_name</key>
 		<string>x86-64</string>
 	</dict>
 	<key>MinimumVersion</key>
@@ -32,9 +34,9 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>https://www.libreoffice.org/donate/dl/mac-x86_64/[0-9].[0-9].[0-9]/en-GB/LibreOffice_[0-9].[0-9].[0-9]_MacOS_%ARCH%.dmg</string>
+				<string>LibreOffice (?P&lt;version&gt;[\d\.]+) \([\d-]+\) - (?i)%RELEASE% Branch</string>
 				<key>url</key>
-				<string>https://www.libreoffice.org/download/download-libreoffice/</string>
+				<string>https://www.libreoffice.org/download/release-notes/</string>
 			</dict>
 		</dict>
 		<dict>
@@ -51,7 +53,7 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%match%</string>
+				<string>https://www.libreoffice.org/donate/dl/mac-%ARCH%/%match%/en-GB/LibreOffice_%match%_MacOS_%aux_arch_name%.dmg</string>
 				<key>filename</key>
 				<string>%NAME%-%ARCH%.dmg</string>
 			</dict>
