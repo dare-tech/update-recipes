@@ -12,6 +12,8 @@
 		<string>BlueJeans</string>
 		<key>ARCH</key>
 		<string>x86_64</string>
+		<key>FILETYPE</key>
+		<string>pkg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -21,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>https://swdl.bluejeans.com/desktop-app/mac/.*/.*/BlueJeansAdminInstaller\(%ARCH%\).*</string>
+				<string>https://swdl.bluejeans.com/desktop-app/mac/.*/.*/BlueJeansAdminInstaller\&lpar;%ARCH%&rpar;</string>
 				<key>url</key>
 				<string>https://www.bluejeans.com/downloads</string>
 			</dict>
@@ -34,7 +36,7 @@
 				<key>filename</key>
 				<string>%NAME%.pkg</string>
 				<key>url</key>
-				<string>%match%</string>
+				<string>%match%.%FILETYPE%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
