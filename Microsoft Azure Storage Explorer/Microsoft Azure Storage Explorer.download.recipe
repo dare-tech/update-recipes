@@ -21,8 +21,6 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>.*\.zip$</string>
-				<key>asset_regex</key>
 				<string>.*\%ARCH%.zip</string>
 				<key>github_repo</key>
 				<string>microsoft/AzureStorageExplorer</string>
