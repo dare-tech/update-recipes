@@ -27,7 +27,7 @@
                 <key>github_repo</key>
                 <string>pritunl/pritunl-client-electron</string>
                 <key>asset_regex</key>
-                <string>Pritunl%ARCH%.pkg.zip</string>
+                <string>Pritunl.arm64.pkg.zip</string>
             </dict>
         </dict>
         <dict>
