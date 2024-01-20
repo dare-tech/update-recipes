@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Firefox Developer Edition.</string>
+	<key>Identifier</key>
+	<string>com.github.dare-tech.download.FirefoxDeveloperEdition</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Firefox Developer Edition</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>https://download.mozilla.org/?product=firefox-devedition-latest-ssl&amp;os=osx&amp;lang=en-GB&amp;_gl=1*1yj8fg0*_ga*MTE3MTM5OTg2OS4xNzA1NzA5OTk0*_ga_MQ7767QQQW*MTcwNTc2NDUyOC4yLjAuMTcwNTc2NDUzMS4wLjAuMA..</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/Firefox Developer Edition.app</string>
+				<key>requirement</key>
+				<string>identifier "org.mozilla.firefoxdeveloperedition" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "43AQ936H96"</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/Firefox Developer Edition.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+	</array>
+</dict>
+</plist>
