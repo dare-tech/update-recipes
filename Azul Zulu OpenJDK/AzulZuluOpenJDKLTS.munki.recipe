@@ -12,12 +12,20 @@
         <string>apps/Azul</string>
         <key>NAME</key>
         <string>AzulZuluOpenJDK%MAJORVERSION%LTS</string>
+        <key>VERSIONKEY</key>
+        <string>CFBundleShortVersionString</string>
+        <key>PKGLABEL</key>
+        <string>Double-Click to Install Zulu %MAJORVERSION%</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
             <array>
                 <string>testing</string>
             </array>
+            <key>description</key>
+            <string>Azul Zulu builds of OpenJDK are open source, TCK-tested and certified builds of OpenJDK. Azul Zulu is available for a wide range of hardware platforms and operating systems.</string>
+           	<key>category</key>
+            <string>Developer</string>
             <key>developer</key>
             <string>Azul</string>
             <key>display_name</key>
@@ -40,7 +48,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_path</key>
-                <string>%pathname%/Double-Click to Install Azul Zulu JDK %MAJORVERSION%.pkg</string>
+                <string>%pathname%/%PKGLABEL%.pkg</string>
                 <key>expected_authority_names</key>
                 <array>
                     <string>Developer ID Installer: Azul Systems, Inc. (TDTHCUPYFR)</string>
@@ -57,7 +65,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
                 <key>flat_pkg_path</key>
-                <string>%pathname%/Double-Click to Install Azul Zulu JDK %MAJORVERSION%.pkg</string>
+                <string>%pathname%/%PKGLABEL%.pkg</string>
                 <key>purge_destination</key>
                 <true/>
             </dict>
@@ -70,7 +78,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/payload</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/zulu-%MAJORVERSION%.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/application.pkg/Payload</string>
                 <key>purge_destination</key>
                 <true/>
             </dict>
@@ -98,10 +106,10 @@
             <key>Arguments</key>
             <dict>
                 <key>info_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload/Contents/Info.plist</string>
+                <string>%RECIPE_CACHE_DIR%/payload/Library/Java/JavaVirtualMachines/zulu-%MAJORVERSION%.jdk/Contents/Info.plist</string>
                 <key>plist_keys</key>
                 <dict>
-                    <key>CFBundleShortVersionString</key>
+                    <key>%VERSIONKEY%</key>
                     <string>version</string>
                 </dict>
             </dict>
@@ -114,7 +122,7 @@
                 <key>pkg_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
                 <key>source_pkg</key>
-                <string>%pathname%/Double-Click to Install Azul Zulu JDK %MAJORVERSION%.pkg</string>
+                <string>%pathname%/%PKGLABEL%.pkg</string>
             </dict>
         </dict>
         <dict>
