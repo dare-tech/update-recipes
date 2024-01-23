@@ -44,21 +44,6 @@ Set the ARCHITECTURE key to "x" to download the Intel version or "aarch" for App
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>expected_authority_names</key>
-                <array>
-                    <string>Developer ID Installer: Azul Systems, Inc. (TDTHCUPYFR)</string>
-                    <string>Developer ID Certification Authority</string>
-                    <string>Apple Root CA</string>
-                </array>
-                <key>input_path</key>
-                <string>%pathname%/Double-Click to Install Zulu %MAJORVERSION%.pkg</string>
-            </dict>
-        </dict>
     </array>
 </dict>
 </plist>
