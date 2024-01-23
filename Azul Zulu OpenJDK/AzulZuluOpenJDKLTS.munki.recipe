@@ -12,8 +12,6 @@
         <string>apps/Azul</string>
         <key>NAME</key>
         <string>AzulZuluOpenJDK%MAJORVERSION%LTS</string>
-        <key>VERSIONKEY</key>
-        <string>CFBundleShortVersionString</string>
         <key>PKGLABEL</key>
         <string>Double-Click to Install Zulu %MAJORVERSION%</string>
         <key>pkginfo</key>
@@ -109,7 +107,7 @@
                 <string>%RECIPE_CACHE_DIR%/payload/Contents/Info.plist</string>
                 <key>plist_keys</key>
                 <dict>
-                    <key>%VERSIONKEY%</key>
+                    <key>CFBundleVersion</key>
                     <string>version</string>
                 </dict>
             </dict>
