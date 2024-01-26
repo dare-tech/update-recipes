@@ -28,6 +28,33 @@
             <string>%NAME%</string>
             <key>name</key>
             <string>%NAME%</string>
+            <key>preinstall_script</key>
+			<string>#!/bin/zsh
+echo "Checking Command Line Tools for Xcode"
+# Only run if the tools are not installed yet
+# To check that try to print the SDK path
+xcode-select -p &> /dev/null
+if [ $? -ne 0 ]; then
+  echo "Command Line Tools for Xcode not found. Installing from softwareupdate…"
+# This temporary file prompts the 'softwareupdate' utility to list the Command Line Tools
+  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
+  PROD=$(softwareupdate -l | grep "\*.*Command Line" | tail -n 1 | sed 's/^[^C]* //')
+  softwareupdate -i "$PROD" --verbose;
+else
+  echo "Command Line Tools for Xcode have been installed."
+fi
+            </string>
+            <key>postinstall_script</key>
+			<string>#!/bin/zsh
+
+if [[ ! -e /usr/local/bin/brew ]]; then
+	if [[ $(uname -m) == "x86_64" ]]; then
+		/bin/ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
+	else
+		/bin/ln -s /opt/homebrew/bin/brew /usr/local/bin/brew
+	fi
+fi
+            </string>
             <key>unattended_install</key>
             <true/>
             <key>unattended_uninstall</key>
@@ -47,30 +74,30 @@
                 <dict>
                     <key>installcheck_script</key>
                     <string>#!/bin/zsh
+installed=1
+not_installed=0
+target_version="%version%"
 
-          installed=1
-          not_installed=0
-          target_version="%version%"
+if [[ $(uname -m) == "x86_64" ]]; then
+brew="/usr/local/Homebrew/bin/brew"
+else
+brew="/opt/homebrew/bin/brew"
+fi
 
-          if [[ $(uname -m) == "x86_64" ]]; then
-            brew="/usr/local/Homebrew/bin/brew"
-          else
-            brew="/opt/homebrew/bin/brew"
-          fi
+if [[ ! -f "$brew" ]]; then
+exit "$not_installed"
+fi
 
-          if [[ ! -f "$brew" ]]; then
-            exit "$not_installed"
-          fi
+current_version=$($brew --version | /usr/bin/head -n 1 | /usr/bin/awk '{ print $2 }')
 
-          current_version=$($brew --version | /usr/bin/head -n 1 | /usr/bin/awk '{ print $2 }')
-
-          if [[ "$current_version" != "$target_version" ]]; then
-              exit "$not_installed"
-          elif [[ "$current_version" == "$target_version" ]]; then
-              exit "$installed"
-          else
-              exit "$not_installed"
-          fi</string>
+if [[ "$current_version" != "$target_version" ]]; then
+  exit "$not_installed"
+elif [[ "$current_version" == "$target_version" ]]; then
+  exit "$installed"
+else
+  exit "$not_installed"
+fi
+  					</string>
                 </dict>
             </dict>
             <key>Processor</key>
