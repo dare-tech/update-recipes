@@ -30,28 +30,26 @@
             <string>%NAME%</string>
             <key>preinstall_script</key>
 			<string>#!/bin/zsh
-echo "Checking Command Line Tools for Xcode"
-# Only run if the tools are not installed yet
-# To check that try to print the SDK path
-xcode-select -p &amp;&gt; /dev/null
-if [ $? -ne 0 ]; then
-  echo "Command Line Tools for Xcode not found. Installing from softwareupdate…"
-# This temporary file prompts the 'softwareupdate' utility to list the Command Line Tools
-  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
-  PROD=$(softwareupdate -l | grep "\*.*Command Line" | tail -n 1 | sed 's/^[^C]* //')
-  softwareupdate -i "$PROD" --verbose;
-else
-  echo "Command Line Tools for Xcode have been installed."
-fi
-            </string>
-            <key>postinstall_script</key>
-			<string>#!/bin/zsh
 
-if [[ ! -e /usr/local/bin/brew ]]; then
-	if [[ $(uname -m) == "x86_64" ]]; then
-		/bin/ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
+echo "Checking Command Line Tools for Xcode"
+
+xcode-select -p &> /dev/null
+if [ $? -ne 0 ]; then
+	echo "Command Line Tools for Xcode not found. Installing from softwareupdate…"
+	touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
+	PROD=$(softwareupdate -l | grep "\*.*Command Line" | tail -n 1 | sed 's/^[^C]* //')
+	softwareupdate -i "$PROD" --verbose;
+else
+	echo "Command Line Tools for Xcode have been installed. Checking if the latest version is installed..."
+	touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
+	installedCLI=$(pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep "version:" | tail -n 1 | sed 's/version: //g'| awk -F'.' '{print $1 "." $2}')
+	PROD=$(softwareupdate -l | grep "\*.*Command Line" | tail -n 1 | sed 's/^[^C]* //')
+	latestCLI=$(echo "$PROD" | sed 's/Command Line Tools for Xcode-//g')
+	if [[ "$installedCLI" != "$latestCLI" ]]; then
+		echo "Command Line Tools for Xcode needs to be updated. Installed - $installedCLI, Available - $latestCLI. Please wait..."
+		softwareupdate -i "$PROD" --verbose;
 	else
-		/bin/ln -s /opt/homebrew/bin/brew /usr/local/bin/brew
+		echo "Command Line Tools for Xcode is up to date. Installed version: $installedCLI"
 	fi
 fi
             </string>
