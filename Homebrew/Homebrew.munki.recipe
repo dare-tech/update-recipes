@@ -33,7 +33,7 @@
 
 echo "Checking Command Line Tools for Xcode"
 
-xcode-select -p &> /dev/null
+xcode-select -p &amp;&gt; /dev/null
 if [ $? -ne 0 ]; then
 	echo "Command Line Tools for Xcode not found. Installing from softwareupdate…"
 	touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
