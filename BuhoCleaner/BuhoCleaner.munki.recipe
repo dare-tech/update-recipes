@@ -18,10 +18,6 @@
 			<array>
 				<string>testing</string>
 			</array>
-			<string>category</string>
-			<key>Utilities</key>
-			<key>description</key>
-			<string>BuhoCleaner is the essential Mac cleaner app made for freeing up disk space and boosting your Mac performance to the max.</string>
 			<key>developer</key>
 			<string>Fenrir Chengdu Inc.</string>
 			<key>display_name</key>
