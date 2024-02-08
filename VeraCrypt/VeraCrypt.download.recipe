@@ -93,6 +93,17 @@
 			<key>Processor</key>
 			<string>Versioner</string>
 		</dict>
+		<dict>
+            <key>Processor</key>
+            <string>PkgCopier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+                <key>source_pkg</key>
+                <string>%pathname%/VeraCrypt_Installer.pkg</string>
+            </dict>
+        </dict>
 	</array>
 </dict>
 </plist>
