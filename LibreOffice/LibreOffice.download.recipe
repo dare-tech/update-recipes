@@ -27,7 +27,7 @@
 				<key>url</key>
 				<string>https://www.libreoffice.org/download/download-libreoffice/</string>
 				<key>re_pattern</key>
-				<string>LibreOffice_([\d\.]+)_MacOS_x86-64_sdk.dmg</string>
+				<string>LibreOffice_([\d\.]+)_MacOS_x86-64_sdk.dmg.torrent</string>
 			</dict>
 		</dict>
 		<dict>
