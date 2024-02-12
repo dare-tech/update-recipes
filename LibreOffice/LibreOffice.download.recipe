@@ -34,7 +34,7 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 				<key>re_pattern</key>
 				<string>\/download\/download-libreoffice\/\?type=mac-x86_64&amp;version=([\d\.]+)&amp;lang=en-GB</string>
 				<key>url</key>
-				<string>https://www.libreoffice.org/download/release-notes/</string>
+				<string>https://www.libreoffice.org/download/download-libreoffice/</string>
 			</dict>
 		</dict>
 		<dict>
