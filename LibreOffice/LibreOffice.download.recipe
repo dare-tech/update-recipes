@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -15,6 +14,8 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 	<dict>
 		<key>NAME</key>
 		<string>LibreOffice</string>
+		<key>RELEASE</key>
+		<string>fresh</string>
 		<key>ARCH</key>
 		<string>x86_64</string>
 		<key>aux_arch_name</key>
@@ -26,17 +27,51 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 	<array>
 		<dict>
 			<key>Comment</key>
+			<string>LibreOffice uses both x86_64 AND x86-64 in the download path. Here we build the x86-64 or aarch64 part.</string>
+			<key>Processor</key>
+			<string>CreateLibreOfficeAuxArchName</string>
+			<key>Arguments</key>
+			<dict>
+				<key>arch_name</key>
+				<string>%ARCH%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Comment</key>
 			<string>Try to parse the the latest fresh or still version from current release notes</string>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>\/download\/download-libreoffice\/\?type=mac-x86_64&amp;version=([\d\.]+)&amp;lang=en-GB</string>
+				<string>LibreOffice (?P&lt;version&gt;[\d\.]+) \([\d-]+\) - (?i)%RELEASE% Branch</string>
 				<key>url</key>
-				<string>https://www.libreoffice.org/download/download-libreoffice/</string>
+				<string>https://www.libreoffice.org/download/release-notes/</string>
 			</dict>
 		</dict>
+    <dict>
+      <key>Processor</key>
+      <string>com.github.jgstew.SharedProcessors/SharedUtilityMethods</string>
+    </dict>
+    <dict>
+    	<key>Processor</key>
+    	<string>com.github.jgstew.SharedProcessors/URLTextSearcherArray</string>
+    	<key>Arguments</key>
+    	<dict>
+    		<key>url</key>
+    		<string>http://downloadarchive.documentfoundation.org/libreoffice/old/</string>
+    		<key>result_output_var_name</key>
+    		<string>match</string>
+    		<key>re_pattern</key>
+        <string>href="(?P&lt;fullversion&gt;%version%[\d\.]+)\/"</string>
+        <key>full_results</key>
+        <true/>
+    	</dict>
+    </dict>
+    <dict>
+      <key>Processor</key>
+      <string>com.github.jgstew.SharedProcessors/VersionMaximumArray</string>
+    </dict>
 		<dict>
 			<key>Comment</key>
 			<string>
@@ -51,7 +86,7 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://download.documentfoundation.org/libreoffice/stable/%match%/mac/%ARCH%/LibreOffice_%match%_MacOS_%aux_arch_name%.dmg</string>
+				<string>http://downloadarchive.documentfoundation.org/libreoffice/old/%version_maximum%/mac/%ARCH%/LibreOffice_%version_maximum%_MacOS_%aux_arch_name%.dmg</string>
 				<key>filename</key>
 				<string>%NAME%-%ARCH%.dmg</string>
 			</dict>
@@ -70,7 +105,7 @@ The architecture (ARCH) can be 'x86-64' or 'aarch64'
 				<key>requirement</key>
 				<string>(identifier "org.libreoffice.script.LibreOffice" or identifier "org.libreoffice.script") and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "7P5S3ZLCN7"</string>
 				<key>strict_verification</key>
-				<true />
+				<true/>
 			</dict>
 		</dict>
 	</array>
