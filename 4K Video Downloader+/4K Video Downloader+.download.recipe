@@ -22,6 +22,11 @@
             <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
+		<key>request_headers</key>
+                <dict>
+                    <key>user-agent</key>
+                    <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15</string>
+                </dict>
                 <key>url</key>
                 <string>https://www.4kdownload.com/downloads/34</string>
                 <key>re_pattern</key>
