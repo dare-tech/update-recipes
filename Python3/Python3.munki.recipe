@@ -90,8 +90,6 @@
                 <dict>
                     <key>CFBundleShortVersionString</key>
                     <string>version</string>
-                    <key>LSMinimumSystemVersion</key>
-                    <string>min_os_version</string>
                 </dict>
             </dict>
         </dict>
