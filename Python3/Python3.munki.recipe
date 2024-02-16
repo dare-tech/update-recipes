@@ -71,7 +71,7 @@
                 <string>%RECIPE_CACHE_DIR%/payload/</string>
                 <key>installs_item_paths</key>
                 <array>
-                    <string>/Applications/Python 3/Python Launcher.app</string>
+                    <string>/Applications/Python %release_version%/Python Launcher.app</string>
                 </array>
             </dict>
         </dict>
