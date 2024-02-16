@@ -35,6 +35,8 @@
 				<string>Latest Python 3 Release - Python (3\.\d+\.\d+)</string>
 				<key>url</key>
 				<string>https://www.python.org/downloads/macos</string>
+				<key>result_output_var_name</key>
+				<string>full_version</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
@@ -45,7 +47,7 @@
 				<key>filename</key>
 				<string>%NAME%.pkg</string>
 				<key>url</key>
-				<string>https://www.python.org/ftp/python/%match%/python-%match%-macos11.pkg</string>
+				<string>https://www.python.org/ftp/python/%full_version%/python-%full_version%-macos11.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
