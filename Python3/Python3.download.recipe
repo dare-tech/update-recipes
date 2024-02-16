@@ -45,7 +45,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.pkg</string>
+				<string>%NAME%-%full_version%.pkg</string>
 				<key>url</key>
 				<string>https://www.python.org/ftp/python/%full_version%/python-%full_version%-macos11.pkg</string>
 			</dict>
