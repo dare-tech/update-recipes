@@ -29,7 +29,6 @@
 			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
-		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
