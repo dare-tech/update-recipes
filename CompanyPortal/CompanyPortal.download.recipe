@@ -15,13 +15,24 @@
     <string>0.6.1</string>
     <key>Process</key>
     <array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://td-infra-prd-us-east-1-s3-atlaselectron.s3.amazonaws.com/talkdesk-latest-metadata.json</string>
+				<key>re_pattern</key>
+				<string>Download Company Portal for macOS from &lt;a href="(https:\/\/go.microsoft.com\/fwlink\/.*)" data-linktype</string>
+			</dict>
+		</dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://go.microsoft.com/fwlink/?linkid=853070</string>
+                <string>%match%</string>
                 <key>filename</key>
                 <string>%NAME%.pkg</string>
             </dict>
