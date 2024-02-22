@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Cryptomator and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.dare-tech.munki.Cryptomator</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Cryptomator</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>Security</string>
+			<key>description</key>
+			<string>With Cryptomator, the key to your data is in your hands. Cryptomator encrypts your data quickly and easily. Afterwards you upload them protected to your favorite cloud service.</string>
+			<key>developer</key>
+			<string>Yiu Lung Wong</string>
+			<key>display_name</key>
+			<string>Cryptomator</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.dare-tech.download.Cryptomator</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
