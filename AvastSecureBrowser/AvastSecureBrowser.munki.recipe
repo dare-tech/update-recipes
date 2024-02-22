@@ -23,7 +23,7 @@
 			<key>developer</key>
 			<string>AVAST Software a.s.</string>
 			<key>display_name</key>
-			<string>Avast SecureB rowser</string>
+			<string>Avast Secure Browser</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
