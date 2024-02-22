@@ -94,7 +94,7 @@
             <key>Arguments</key>
             <dict>
                 <key>info_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload/Avast Secure Browser.app/Contents/Info.plist</string>
+                <string>%RECIPE_CACHE_DIR%/payload/Applications/Avast Secure Browser.app/Contents/Info.plist</string>
                 <key>plist_keys</key>
                 <dict>
                     <key>CFBundleShortVersionString</key>
