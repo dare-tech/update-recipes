@@ -79,8 +79,7 @@ if [[ -e /Applications/Firefox.app/Contents/Resources/application.ini ]]; then
 	done
 fi
 
-exit 0
-</string>
+exit 0</string>
                 </dict>
             </dict>
         </dict>
