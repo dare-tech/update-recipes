@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string> Downloads the latest Firefox ESR release by checking: 
+https://product-details.mozilla.org/1.0/firefox_versions.json for the key: FIREFOX_ESR_NEXT 
+if this exists, then this keys version is used to generate a download URL.
+        
+If FIREFOX_ESR_NEXT does not exist, fails over to FIREFOX_ESR.
+
+Set the 'LOCALE' variable to the required language version.
+
+List of available locale codes here: https://ftp.mozilla.org/pub/firefox/releases/110.0.1/mac/ or here https://ftp.mozilla.org/pub/firefox/releases/latest/README.txt</string>
+    <key>Identifier</key>
+    <string>com.github.dare-tech.munki.Firefox ESR</string>
+    <key>Input</key>
+    <dict>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/firefox</string>
+        <key>NAME</key>
+        <string>FirefoxESR</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>Extended Support Release (ESR), of the Firefox free and open source web browser.</string>
+            <key>display_name</key>
+            <string>Firefox ESR</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>2.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.dataJAR-recipes.download.Firefox ESR</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
+            <key>Arguments</key>
+            <dict>
+                <key>additional_pkginfo</key>
+                <dict>
+                    <key>installcheck_script</key>
+                    <string>#!/bin/zsh
+
+if [[ -e /Applications/Firefox.app/Contents/Resources/application.ini ]]; then
+	echo "Found Firefox at path /Applications/Firefox.app"
+	echo "Checking Firefox installed release..."
+	IFS=$'\n\b'
+	iniContents=($(cat /Applications/Firefox.app/Contents/Resources/application.ini))
+	for line in ${iniContents[@]} ; do
+		if [[ "$line" == "RemotingName=firefox-esr" ]]; then
+			echo "Installed Firefox release is Firefox ESR"
+			exit 1
+        elif [[ "$line" == "RemotingName=firefox" ]]; then
+			echo "Installed Firefox release is Firefox standard edition"
+        	exit 0
+		fi
+	done
+fi
+
+exit 0</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
