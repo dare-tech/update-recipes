@@ -59,16 +59,24 @@ if [[ -e /Applications/Firefox.app/Contents/Resources/application.ini ]]; then
 	for line in ${iniContents[@]} ; do
 		if [[ "$line" == "RemotingName=firefox-esr" ]]; then
 			echo "Installed Firefox release is Firefox ESR"
-        	exit 0
         elif [[ "$line" == "RemotingName=firefox" ]]; then
-			version=$(defaults read /Applications/Firefox.app/Contents/Info.plist CFBundleShortVersionString)
 			echo "Installed Firefox release is Firefox standard edition"
-			exit 1
+			target_version="%version%"
+			installed_version=$(defaults read /Applications/Firefox.app/Contents/Info.plist CFBundleShortVersionString)
+			echo "Latest Firefox Version: $target_version"
+			echo "Installed Firefox Version: $installed_version"
+			if [ ${installed_version:-0} \< $target_version ]; then
+				echo "Update is required for Firefox"
+				exit 0 
+			else
+				echo "Update is not required for Firefox"
+				exit 1
+			fi
 		fi
 	done
 fi
 
-exit 0</string>
+exit 1</string>
                 </dict>
             </dict>
         </dict>
