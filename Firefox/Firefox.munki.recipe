@@ -65,7 +65,7 @@ if [[ -e /Applications/Firefox.app/Contents/Resources/application.ini ]]; then
 			installed_version=$(defaults read /Applications/Firefox.app/Contents/Info.plist CFBundleShortVersionString)
 			echo "Latest Firefox Version: $target_version"
 			echo "Installed Firefox Version: $installed_version"
-			if [ ${installed_version:-0} \< $target_version ]; then
+			if [ ${installed_version:-0} \&lt; $target_version ]; then
 				echo "Update is required for Firefox"
 				exit 0 
 			else
