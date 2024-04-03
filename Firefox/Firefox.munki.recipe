@@ -43,58 +43,29 @@ See the following URLs for more info:
     <array>
         <dict>
             <key>Processor</key>
-            <string>PlistReader</string>
+            <string>PkgCopier</string>
             <key>Arguments</key>
             <dict>
-                <key>info_path</key>
-                <string>%pathname%/Firefox.app/Contents/Info.plist</string>
-                <key>plist_keys</key>
-                <dict>
-                    <key>CFBundleShortVersionString</key>
-                    <string>version</string>
-                </dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/Applications/Firefox.app</string>
+                <key>source_pkg</key>
+                <string>%pathname%/Firefox.app</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
+            <string>MunkiInstallsItemsCreator</string>
             <key>Arguments</key>
             <dict>
-                <key>additional_pkginfo</key>
-                <dict>
-                    <key>installcheck_script</key>
-                    <string>#!/bin/zsh
-
-if [[ -e /Applications/Firefox.app/Contents/Resources/application.ini ]]; then
-	echo "Found Firefox at path /Applications/Firefox.app"
-	echo "Checking Firefox installed release..."
-	IFS=$'\n\b'
-	iniContents=($(cat /Applications/Firefox.app/Contents/Resources/application.ini))
-	for line in ${iniContents[@]} ; do
-		if [[ "$line" == "RemotingName=firefox-esr" ]]; then
-			echo "Installed Firefox release is Firefox ESR"
-        elif [[ "$line" == "RemotingName=firefox" ]]; then
-			echo "Installed Firefox release is Firefox standard edition"
-			target_version="%version%"
-			installed_version=$(defaults read /Applications/Firefox.app/Contents/Info.plist CFBundleShortVersionString)
-			echo "Latest Firefox Version: $target_version"
-			echo "Installed Firefox Version: $installed_version"
-			if [ ${installed_version:-0} \&lt; $target_version ]; then
-				echo "Update is required for Firefox"
-				exit 0 
-			else
-				echo "Update is not required for Firefox"
-				exit 1
-			fi
-		fi
-	done
-fi
-
-exit 1</string>
-                </dict>
+                <key>faux_root</key>
+                <string>%RECIPE_CACHE_DIR%</string>
+                <key>installs_item_paths</key>
+                <array>
+                    <string>/Applications/Firefox.app</string>
+                </array>
             </dict>
-        </dict>
-        <dict>
+		</dict>
+		<dict>
             <key>Arguments</key>
             <dict>
                 <key>pkg_path</key>
@@ -104,7 +75,7 @@ exit 1</string>
             </dict>
             <key>Processor</key>
             <string>MunkiImporter</string>
-        </dict>
+		</dict>
     </array>
 </dict>
 </plist>
