@@ -164,7 +164,6 @@
                 <array>
                     <string>%RECIPE_CACHE_DIR%/unpack</string>
                     <string>%RECIPE_CACHE_DIR%/Applications</string>
-                    <string>%RECIPE_CACHE_DIR%/%NAME%</string>
                 </array>
             </dict>
             <key>Processor</key>
