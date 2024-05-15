@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>This recipe is just a temporary recipe to import a specified version when the developer hasn't uploaded the latest version to the static zip download url. Add the URL from the App centre below as a workaround.</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Cloudflare WARP.</string>
+	<key>Identifier</key>
+	<string>com.github.dare-tech.download.CloudflareWARP</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>CloudflareWarp</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.pkg</string>
+				<key>url</key>
+				<string>https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/e1979def-fc33-4c20-a596-3007ede9be33/Cloudflare_WARP_2024.3.444.0.pkg?sv=2019-02-02&amp;sr=c&amp;sig=efWphI0xsm9veTDJ9zqk0jc1xy7TEgd4AddQJ9C5%2BkI%3D&amp;se=2024-05-15T16%3A07%3A06Z&amp;sp=r&amp;download_origin=appcenter</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>expected_authority_names</key>
+				<array>
+					<string>Developer ID Installer: Cloudflare Inc. (68WVV388M8)</string>
+					<string>Developer ID Certification Authority</string>
+					<string>Apple Root CA</string>
+				</array>
+				<key>input_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>
