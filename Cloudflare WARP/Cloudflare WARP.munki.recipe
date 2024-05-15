@@ -45,19 +45,10 @@
         <dict>
             <key>Arguments</key>
             <dict>
-                <key>pattern</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/Cloudflare_WARP_*.pkg</string>
-            </dict>
-            <key>Processor</key>
-            <string>FileFinder</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
                 <key>flat_pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/%found_basename%</string>
+                <string>%pathname%</string>
                 <key>purge_destination</key>
                 <true/>
             </dict>
