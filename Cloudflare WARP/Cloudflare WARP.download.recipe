@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>This recipe is just a temporary recipe to import a specified version when the developer hasn't uploaded the latest version to the static zip download url. Add the URL from the App centre below as a workaround.</string>
+	<string>This recipe is just a temporary recipe to import a specified version when the developer hasn't uploaded the latest version to the static zip download url. Add the URL from the App centre and the version under MANUALVERSION below as a workaround.</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Cloudflare WARP.</string>
 	<key>Identifier</key>
@@ -12,6 +12,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>CloudflareWarp</string>
+		<key>MANUALVERSION</key>
+		<string>2024.3.444.0</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
