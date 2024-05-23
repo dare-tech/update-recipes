@@ -34,7 +34,7 @@
         <key>re_pattern</key>
         <string>(dbvis-\d{1,2}\.\d\.?[\d{1,2}]?/media/dbvis_macos-%PLATFORM_ARCH%_\d{1,2}\_\d\_?[\d{1,2}]?).dmg</string>
         <key>result_output_var_name</key>
-        <string>version</string>
+        <string>dmgname</string>
       </dict>
     </dict>
     <dict>
@@ -43,7 +43,7 @@
     	 <key>Arguments</key>
     	 <dict>
         	<key>url</key>
-    		<string>https://dbvis.com/product_download/%version%.dmg</string>
+    		<string>https://dbvis.com/product_download/%dmgname%.dmg</string>
 		<key>filename</key>
 		<string>%NAME%.dmg</string>
     	</dict>
