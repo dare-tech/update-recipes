@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Microsoft Remote Help.</string>
+	<key>Identifier</key>
+	<string>com.github.dare-tech.download.MicrosoftRemoteHelp</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Microsoft Remote Help</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+		  <key>Processor</key>
+		  <string>URLTextSearcher</string>
+		  <key>Arguments</key>
+		  <dict>
+			<key>url</key>
+			<string>https://learn.microsoft.com/en-us/mem/intune/fundamentals/remote-help-macos?tabs=intune</string>
+			<key>re_pattern</key>
+			<string>The most recent version of Remote Help is &lt;strong&gt;([a-zA-Z\0-9\_]*)&lt;/strong&gt;</string>
+			<key>result_output_var_name</key>
+			<string>version</string>
+		  </dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.pkg</string>
+				<key>url</key>
+				<string>https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Help_%version%_installer.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>expected_authority_names</key>
+				<array>
+					<string>Developer ID Installer: Microsoft Corporation (UBF8T346G9)</string>
+					<string>Developer ID Certification Authority</string>
+					<string>Apple Root CA</string>
+				</array>
+				<key>input_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>
