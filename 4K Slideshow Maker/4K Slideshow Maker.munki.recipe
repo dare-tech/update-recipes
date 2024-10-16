@@ -28,6 +28,8 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>version_comparison_key</key>
+        		<string>CFBundleVersion</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
