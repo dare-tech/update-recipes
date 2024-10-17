@@ -28,7 +28,7 @@
                 <key>url</key>
                 <string>https://www.4kdownload.com/downloads/34</string>
                 <key>re_pattern</key>
-                <string>https:\/\/dl\.4kdownload\.com\/app\/4ktokkit_\d+\.\d+\.\d+\.dmg\?source=website</string>
+                <string>https:\/\/dl\.4kdownload\.com\/app\/4ktokkit_\d+\.\d+\.\d+_x64\.dmg\?source=website</string>
             </dict>
         </dict>
 		<dict>
