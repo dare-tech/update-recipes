@@ -37,7 +37,7 @@
 				<key>url</key>
 				<string>%SEARCH_URL%</string>
 				<key>re_pattern</key>
-				<string>(?P&lt;filename&gt;MAMP_MAMP_PRO_(?P&lt;version&gt;((?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)))\-%PLATFORM_ARCH%).pkg"</string>
+				<string>href="(https:\/\/downloads.mamp.info\/MAMP-PRO\/macOS\/MAMP-PRO\/MAMP-MAMP-PRO-((?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+))\-%PLATFORM_ARCH%.pkg)"</string>
 			</dict>
 		</dict>
 		<dict>
