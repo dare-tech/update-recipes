@@ -23,7 +23,7 @@
 				<key>url</key>
 				<string>https://td-infra-prd-us-east-1-s3-atlaselectron.s3.amazonaws.com/talkdesk-latest-metadata.json</string>
 				<key>re_pattern</key>
-				<string>"version": "([\d\.]+)"</string>
+				<string>"version":"([\d\.]+)"</string>
 			</dict>
 		</dict>
 		<dict>
