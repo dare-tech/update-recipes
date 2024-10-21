@@ -48,7 +48,7 @@
 				<key>url</key>
 				<string>%match%</string>
 				<key>filename</key>
-				<string>MAMP-%PLATFORM_ARCH%.pkg</string>
+				<string>MAMP.pkg</string>
 			</dict>
 		</dict>
 		<dict>
