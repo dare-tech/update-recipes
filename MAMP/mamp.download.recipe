@@ -46,9 +46,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%DOWNLOAD_URL%/%version%/%filename%.pkg</string>
+				<string>%match%</string>
 				<key>filename</key>
-				<string>%filename%-%version%.pkg</string>
+				<string>%NAME%-%version%.pkg</string>
 			</dict>
 		</dict>
 		<dict>
